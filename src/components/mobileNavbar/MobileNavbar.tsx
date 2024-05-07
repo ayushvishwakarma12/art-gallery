@@ -7,7 +7,6 @@ import { Link, useLocation } from "react-router-dom";
 const MobileNavbar: React.FC = () => {
   const { pathname } = useLocation();
   const path = pathname.split("/")[1];
-  console.log(path);
 
   return (
     <div className="fixed bottom-0 rounded-t-2xl h-[80px] bg-white w-full px-4  shadow-2xl z-50">
@@ -17,7 +16,10 @@ const MobileNavbar: React.FC = () => {
         </div>
       </div>
       <div className="flex w-full justify-between items-center text-3xl text-slate-500 mt-5 ">
-        <Link to={"/"} className={`${pathname == "/" ? "text-[#FD814A]" : ""}`}>
+        <Link
+          to={"/"}
+          className={`${pathname === "/" ? "text-[#FD814A]" : ""}`}
+        >
           <BsCompass />
         </Link>
         <Link
@@ -32,12 +34,12 @@ const MobileNavbar: React.FC = () => {
         >
           <PiPencilLine />
         </Link>
-        {/* <Link
+        <Link
           to={"/profile"}
-          className={`${path == "category" ? "text-[#FD814A] scale-125" : ""}`}
+          className={`${path === "profile" ? "text-[#FD814A] scale-125" : ""}`}
         >
           <FaRegUser />
-        </Link> */}
+        </Link>
       </div>
     </div>
   );

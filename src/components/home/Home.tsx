@@ -13,13 +13,13 @@ const Home: React.FC = () => {
         }}
       >
         <div
-          className="bg-white rounded-2xl mx-2 md:ml-10 px-12 py-12 shadow-2xl h-[300px] flex flex-col justify-center
-        "
-          style={{ background: "rgba(0,0,0,0.7)" }}
+          className=" rounded-2xl mx-2 md:ml-10 px-12 py-12 shadow-2xl h-[300px] flex flex-col justify-center
+          hover:bg-slate-800 hover:bg-opacity-80 duration-1000 bg-black bg-opacity-70 ease-in-out scale-100 hover:scale-105"
         >
-          <h1 className="text-4xl font-briemhand text-center text-white">
+          <h1 className="text-4xl font-briemhand text-center text-white scale-up ">
             A Journey Through Arts
           </h1>
+
           <button
             className=" bg-rose-300 px-5 hover:tracking-widest py-4 font-semibold rounded-xl mt-10 hover:bg-rose-500 duration-500"
             onClick={() => navigate("/gallery")}

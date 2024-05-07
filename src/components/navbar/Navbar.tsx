@@ -5,9 +5,14 @@ const Navbar: React.FC = () => {
   const { pathname } = useLocation();
   const path = pathname.split("/")[1];
   return (
-    <div className="flex justify-between items-center px-5 py-4 bg-slate-200 ">
+    <div className="flex justify-between items-center px-4 py-4 bg-slate-200 ">
       <Link to={"/"}>
-        <span className="font-bold font-briemhand text-2xl">Art Gallery</span>
+        <span className="font-bold font-briemhand text-xl">
+          <span className="text-orange-500 text-4xl italic">A</span>
+          rt
+          <span className="text-orange-500 text-4xl italic">G</span>
+          allery
+        </span>
       </Link>
       <ul className="flex items-center gap-5 font-semibold">
         <Link to={"/"}>
@@ -41,6 +46,17 @@ const Navbar: React.FC = () => {
             }`}
           >
             Category
+          </li>
+        </Link>
+        <Link to={"/profile"}>
+          <li
+            className={`${
+              path === "profile"
+                ? "text-[#FD814A] underline underline-offset-8"
+                : ""
+            }`}
+          >
+            Profile
           </li>
         </Link>
       </ul>
